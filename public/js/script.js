@@ -365,7 +365,7 @@ function getModelDateFields(model_name, code) {
   for (const model of JSON.parse(code).models) {
     if (model.name == model_name) {
       for (const block_field of model.fields) {
-        if (block_field.type == 'boolean') {
+        if (block_field.type == 'date') {
           fields.push([block_field.name, block_field.name]);
         }
       }

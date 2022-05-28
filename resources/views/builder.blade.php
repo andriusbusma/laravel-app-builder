@@ -61,7 +61,7 @@
                         <block type="controller_list_relation"></block>
                     </category>
                 </xml>
-                <div id="blocklyDiv" style="width:100%;height:500px" class="mb-4"></div>
+                <div id="blocklyDiv" style="width:100%;height:800px" class="mb-4"></div>
                 <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#modal">Generate</button>
                 <!-- Modal -->
                 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">

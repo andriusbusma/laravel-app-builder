@@ -29,10 +29,14 @@ Blockly.Generator.prototype.workspaceToCode = function(workspace) {
         }
       }
       if(block.type == 'model_model'){
-        model_code.push(line);
+        if(line){
+          model_code.push(line);
+        }
       }
       if(block.type == 'controller_controller'){
-        controller_code.push(line);
+        if(line){
+          controller_code.push(line);
+        }
       }
     }
   }
@@ -46,10 +50,10 @@ Blockly.JSON.scrub_ = function(block, code, opt_thisOnly) {
 
     var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
     var nextCode = opt_thisOnly ? '' : this.blockToCode(nextBlock);
-    if(nextCode){
-        return code +','+ nextCode;
+    if(nextCode && code.length){
+      return code +','+ nextCode;
     }else{
-        return code
+        return code + nextCode;
     }
   };
 
